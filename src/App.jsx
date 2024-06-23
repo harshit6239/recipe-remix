@@ -17,10 +17,6 @@ function App() {
   const inputRef = useRef();
   const mainRef = useRef();
 
-  // useEffect(()=>{
-  //   console.log(acordianContent, typeof acordianContent);
-  // }, [acordianContent])
-
   useEffect(() => {
     if(!base64File) return;
   }, [base64File]);
