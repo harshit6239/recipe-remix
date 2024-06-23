@@ -17,9 +17,9 @@ function App() {
   const inputRef = useRef();
   const mainRef = useRef();
 
-  useEffect(()=>{
-    console.log(acordianContent, typeof acordianContent);
-  }, [acordianContent])
+  // useEffect(()=>{
+  //   console.log(acordianContent, typeof acordianContent);
+  // }, [acordianContent])
 
   useEffect(() => {
     if(!base64File) return;
@@ -61,10 +61,11 @@ function App() {
     geminiApiCall(base64File, fileType).then((res) => {
       setLoading(false);
       setAcordianContent(JSON.parse(res));
+      // console.log(JSON.parse(res));
     }).catch((err) => {
       setLoading(false);
       setAcordianContent(null);
-      console.log(err);
+      // console.log(err);
     });
   }
 
